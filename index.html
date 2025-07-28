@@ -6,45 +6,61 @@
   <meta name="description" content="Fahrtraining - Werde sicher auf zwei Rädern!">
   <title>Fahrtraining Landing Page</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Fahrtraining</div>
+      <ul class="nav-links">
+        <li><a href="#infos">Infos</a></li>
+        <li><a href="#buchung">Buchen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
   <header class="hero">
-    <h1>Fahrtraining – Sicher auf zwei Rädern</h1>
-    <p>Individuelle Trainings für Anfänger & Wiedereinsteiger</p>
-    <a href="#buchung" class="btn-primary">Jetzt buchen</a>
+    <div class="hero-content">
+      <h1>Fahrtraining – Sicher auf zwei Rädern</h1>
+      <p>Praxisnahes Training für Anfänger und Wiedereinsteiger.</p>
+      <a href="#buchung" class="btn-primary">Jetzt Termin sichern</a>
+    </div>
   </header>
 
-  <section id="infos">
+  <!-- Infos Section -->
+  <section id="infos" class="section">
     <h2>Über unser Training</h2>
-    <p>Wir bieten intensive Fahrtrainings an, um deine Fahrtechnik zu verbessern und dich fit für den Straßenverkehr zu machen.</p>
+    <p>Unser intensives Fahrtraining verbessert deine Fahrtechnik und macht dich sicher im Straßenverkehr. 
+       Perfekt für alle, die sicher und souverän fahren wollen.</p>
+    <div class="image-grid">
+      <img src="https://source.unsplash.com/600x400/?motorcycle,training" alt="Fahrtraining 1">
+      <img src="https://source.unsplash.com/600x400/?biker,road" alt="Fahrtraining 2">
+      <img src="https://source.unsplash.com/600x400/?motorbike,helmet" alt="Fahrtraining 3">
+    </div>
   </section>
 
-  <section id="buchung">
+  <!-- Buchung Section -->
+  <section id="buchung" class="section">
     <h2>Termin buchen</h2>
     <p>Wähle hier einen passenden Termin für dein Training.</p>
-    
     <!-- Calendly inline widget begin -->
     <div class="calendly-inline-widget" data-url="https://calendly.com/david-laier/30min" style="min-width:320px;height:700px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <!-- Calendly inline widget end -->
-
-    <a href="#kontakt" class="btn-primary">Unverbindlich anfragen</a>
   </section>
 
-  <section id="kontakt">
+  <!-- Kontakt Section -->
+  <section id="kontakt" class="section">
     <h2>Kontakt</h2>
-    <p>Schicke uns eine Nachricht, wenn du Fragen hast oder ein spezielles Fahrtraining wünschst.</p>
-    <form name="kontakt" netlify netlify-honeypot="bot-field">
+    <p>Fragen? Schicke uns einfach eine Nachricht!</p>
+    <form name="kontakt" netlify netlify-honeypot="bot-field" class="contact-form">
       <input type="hidden" name="form-name" value="kontakt">
-      <label for="name">Name</label><br>
-      <input type="text" id="name" name="name" required><br><br>
-      
-      <label for="email">E-Mail</label><br>
-      <input type="email" id="email" name="email" required><br><br>
-      
-      <label for="message">Nachricht</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
-      
+      <input type="text" name="name" placeholder="Dein Name" required>
+      <input type="email" name="email" placeholder="Deine E-Mail" required>
+      <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
       <button type="submit" class="btn-primary">Absenden</button>
     </form>
   </section>
